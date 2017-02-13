@@ -1,0 +1,7 @@
+version: "2"
+services:
+  spark:
+    build: .
+    volumes:
+      - ./scripts:/spark/scripts
+      - ./data:/spark/data
