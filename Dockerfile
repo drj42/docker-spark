@@ -19,7 +19,10 @@ RUN set -ex \
     && useradd -ms /bin/bash -d ${SPARK_HOME} spark \
     && chown spark: -R ${SPARK_HOME}
 
-EXPOSE 8080
+EXPOSE 4040
+
+RUN pip install ipython
 
 USER spark
 WORKDIR /spark
+COPY conf/log4j.properties conf/log4j.properties

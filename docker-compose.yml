@@ -5,3 +5,5 @@ services:
     volumes:
       - ./scripts:/spark/scripts
       - ./data:/spark/data
+    ports:
+      - "4040:4040"
